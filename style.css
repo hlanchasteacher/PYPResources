@@ -162,4 +162,11 @@ footer {
     .resource-button .emoji {
         font-size: 2em;
     }
+	.language-switcher a {
+    font-size: 1.8em; /* Tamaño de las banderas (emojis) */
+    text-decoration: none;
+    margin: 0 5px;
+    transition: transform 0.2s ease; /* Transición suave */
+    display: inline-block; /* Para que la transición funcione */
+	}
 }
