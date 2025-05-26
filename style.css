@@ -1,0 +1,165 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f8ff; /* Azul cielo claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex; /* Habilitamos Flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente */
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 15px 30px; /* Ajustamos el padding */
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 60px; /* Altura fija para los logos, ajústala si es necesario */
+    width: auto;  /* Mantiene la proporción */
+    object-fit: contain; /* Asegura que el logo se vea bien sin deformarse */
+    background-color: white; /* Fondo blanco para mejor visibilidad si son PNGs */
+    padding: 5px;
+    border-radius: 5px; /* Bordes redondeados suaves */
+}
+
+.header-text {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio central */
+    padding: 0 20px; /* Espacio a los lados del texto */
+}
+
+header h1 {
+    margin: 0 0 5px 0; /* Menos margen inferior */
+    font-size: 2.2em; /* Puedes ajustar el tamaño si es necesario */
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.category {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.category h2 {
+    color: #007bff; /* Azul */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Columnas flexibles */
+    gap: 20px; /* Espacio entre botones */
+    margin-top: 20px;
+}
+
+.resource-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Gris claro */
+    color: #333;
+    text-decoration: none;
+    padding: 20px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    min-height: 100px; /* Altura mínima para alinear */
+}
+
+.resource-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background-color: #e9ecef; /* Un poco más oscuro al pasar el ratón */
+    color: #0056b3; /* Azul oscuro */
+}
+
+.resource-button .emoji {
+    font-size: 2.5em; /* Emojis más grandes */
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
+
+/* Ajustes para pantallas pequeñas (Tablets y Móviles) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila los elementos en vertical */
+        padding: 20px;
+    }
+
+    .logo {
+        height: 50px; /* Un poco más pequeños */
+        margin-bottom: 15px; /* Espacio debajo de los logos */
+    }
+    
+    .logo-colegio {
+        order: 1; /* Asegura el orden: Colegio */
+    }
+
+    .header-text {
+        order: 2; /* Mueve el texto al medio */
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .logo-ib {
+       margin-bottom: 0; /* Quita el margen al último logo */
+       order: 3; /* Mueve el logo IB al final */
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+     header p {
+        font-size: 1em;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (Móviles) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    .logo {
+        height: 45px;
+    }
+     .resource-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 15px;
+    }
+     .resource-button {
+        font-size: 1em;
+        padding: 15px 10px;
+    }
+    .resource-button .emoji {
+        font-size: 2em;
+    }
+}

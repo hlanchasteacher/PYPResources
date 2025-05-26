@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Digitales PEP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img src="images/Agora2021_Madrid_Logo_H_Color.jpg" alt="Logo Agora Madrid International School" class="logo logo-colegio">
+
+        <div class="header-text">
+            <h1>🚀 Recursos Digitales PEP 🚀</h1>
+            <p>¡Haz clic para explorar, crear y aprender!</p>
+        </div>
+
+        <img src="images/pyp-programme-logo-en.png" alt="Logo del Programa PYP del IB" class="logo logo-ib">
+    </header>
+
+    <main>
+        <section class="category">
+            <h2>🔎 Investigación y Consulta</h2>
+            <div class="resource-grid">
+                <a href="https://es.vikidia.org/" target="_blank" class="resource-button">
+                    <span class="emoji">📚</span> Vikidia
+                </a>
+                <a href="https://www.kiddle.co/" target="_blank" class="resource-button">
+                    <span class="emoji">🧒</span> Kiddle
+                </a>
+                <a href="https://procomun.intef.es/" target="_blank" class="resource-button">
+                    <span class="emoji">💡</span> Procomún
+                </a>
+                <a href="https://bnescolar.bne.es/" target="_blank" class="resource-button">
+                    <span class="emoji">🇪🇸</span> BNEscolar
+                </a>
+                 <a href="https://es.wikipedia.org/" target="_blank" class="resource-button">
+                    <span class="emoji">🌐</span> Wikipedia (Uso guiado)
+                </a>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>📖 Bibliotecas Digitales</h2>
+            <div class="resource-grid">
+                <a href="http://en.childrenslibrary.org/" target="_blank" class="resource-button">
+                    <span class="emoji">🌍</span> ICDL
+                </a>
+                <a href="https://www.bne.es/es/catalogos/biblioteca-digital-hispanica" target="_blank" class="resource-button">
+                    <span class="emoji">🏛️</span> BNE Digital
+                </a>
+                <a href="https://www.gutenberg.org/" target="_blank" class="resource-button">
+                    <span class="emoji">📜</span> Project Gutenberg
+                </a>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>🎨 Creación y Productividad</h2>
+            <div class="resource-grid">
+                <a href="https://edu.google.com/" target="_blank" class="resource-button">
+                    <span class="emoji">🇬</span> Google Workspace
+                </a>
+                <a href="https://www.microsoft.com/es-es/education/products/microsoft-365" target="_blank" class="resource-button">
+                    <span class="emoji">🇲</span> Microsoft 365
+                </a>
+                <a href="https://www.canva.com/es_es/educacion/" target="_blank" class="resource-button">
+                    <span class="emoji">✨</span> Canva Edu
+                </a>
+                <a href="https://bookcreator.com/" target="_blank" class="resource-button">
+                    <span class="emoji">📘</span> Book Creator
+                </a>
+                <a href="https://scratch.mit.edu/" target="_blank" class="resource-button">
+                    <span class="emoji">🐈</span> Scratch
+                </a>
+                 <a href="https://www.scratchjr.org/" target="_blank" class="resource-button">
+                    <span class="emoji">🐱</span> ScratchJr
+                </a>
+                <a href="https://www.audacityteam.org/" target="_blank" class="resource-button">
+                    <span class="emoji">🎤</span> Audacity
+                </a>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>🤝 Colaboración y Aula</h2>
+            <div class="resource-grid">
+                <a href="https://classroom.google.com/" target="_blank" class="resource-button">
+                    <span class="emoji">🧑‍🏫</span> Google Classroom
+                </a>
+                <a href="https://teams.microsoft.com/" target="_blank" class="resource-button">
+                    <span class="emoji">💼</span> Microsoft Teams
+                </a>
+                <a href="https://padlet.com/" target="_blank" class="resource-button">
+                    <span class="emoji">📌</span> Padlet
+                </a>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>🎮 Aprendizaje Interactivo</h2>
+            <div class="resource-grid">
+                <a href="https://es.khanacademy.org/" target="_blank" class="resource-button">
+                    <span class="emoji">📈</span> Khan Academy
+                </a>
+                 <a href="https://khankids.org/" target="_blank" class="resource-button">
+                    <span class="emoji">🧸</span> Khan Kids
+                </a>
+                <a href="https://code.org/" target="_blank" class="resource-button">
+                    <span class="emoji">💻</span> Code.org
+                </a>
+                <a href="https://es.educaplay.com/" target="_blank" class="resource-button">
+                    <span class="emoji">🧩</span> Educaplay
+                </a>
+                <a href="https://www.mundoprimaria.com/" target="_blank" class="resource-button">
+                    <span class="emoji">🎈</span> Mundo Primaria
+                </a>
+                 <a href="https://www.celebriti.com/" target="_blank" class="resource-button">
+                    <span class="emoji">🏆</span> Celebriti
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Página creada para el uso escolar. ¡Recuerda navegar seguro!</p>
+    </footer>
+
+</body>
+</html>
