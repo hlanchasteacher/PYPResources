@@ -162,48 +162,30 @@ footer {
     .resource-button .emoji {
         font-size: 2em;
     }
-	/* --- Language Switcher Styles --- */
-	.language-switcher {
-		position: fixed; /* Lo fija en la pantalla */
-		top: 10px;
-		right: 15px;
-		background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
-		padding: 8px 12px;
-		border-radius: 20px; /* Bordes redondeados */
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
-		z-index: 1000; /* Asegura que esté por encima de todo */
-		border: 1px solid #ddd;
-		line-height: 0; /* Ayuda a alinear las imágenes */
-	}
+	/* --- Language Switcher Styles (MODIFICADO) --- */
+.language-switcher {
+    margin-top: 15px; /* Espacio sobre las banderas */
+    text-align: center;
+    /* !! QUITAMOS todos los estilos de position, top, right, bg, shadow, etc. !! */
+}
 
-	.language-switcher a {
-		text-decoration: none;
-		margin: 0 5px;
-		transition: transform 0.2s ease; /* Transición suave */
-		display: inline-block; /* Para que la transición funcione */
-	}
+.language-switcher a {
+    text-decoration: none;
+    margin: 0 8px; /* Espacio entre banderas */
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
 
-	.language-switcher a:hover {
-		transform: scale(1.15); /* Aumenta tamaño al pasar el ratón */
-	}
+.language-switcher a:hover {
+    transform: scale(1.15);
+}
 
-	.flag-icon {
-		width: 32px;  /* Ancho de la bandera (ajusta si es necesario) */
-		height: auto; /* Mantiene la proporción */
-		vertical-align: middle; /* Centra verticalmente */
-		border: 1px solid #ccc; /* Opcional: añade un borde fino */
-		border-radius: 3px;     /* Opcional: redondea un poco */
-	}
-
-	/* --- Media Queries (Responsive) --- */
-	@media (max-width: 768px) {
-		.language-switcher {
-			top: 5px;
-			right: 10px;
-			padding: 5px 8px;
-		}
-		 .flag-icon {
-			width: 28px; /* Un poco más pequeñas en móvil */
-		 }
-	}
+.flag-icon {
+    width: 32px;
+    height: auto;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/* --- FIN Language Switcher --- */
 }
