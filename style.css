@@ -2,18 +2,19 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
+    /* Se quitó el padding-top: 60px; que era para el switcher fijo */
     background-color: #f0f8ff; /* Azul cielo claro */
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    display: flex; /* Habilitamos Flexbox */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center; /* Centramos verticalmente */
+    display: flex;
+    flex-direction: column; /* Apila verticalmente */
+    align-items: center; /* Centra horizontalmente */
     background-color: #4CAF50; /* Verde */
     color: white;
-    padding: 15px 30px; /* Ajustamos el padding */
+    padding: 25px 20px; /* Ajustamos padding */
     text-align: center;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -21,22 +22,23 @@ header {
 }
 
 .logo {
-    height: 60px; /* Altura fija para los logos, ajústala si es necesario */
-    width: auto;  /* Mantiene la proporción */
-    object-fit: contain; /* Asegura que el logo se vea bien sin deformarse */
-    background-color: white; /* Fondo blanco para mejor visibilidad si son PNGs */
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    background-color: white; /* Fondo blanco para mejor visibilidad si son PNGs transparentes */
     padding: 5px;
-    border-radius: 5px; /* Bordes redondeados suaves */
+    border-radius: 5px;
+    margin: 10px 0; /* Margen vertical para separar los elementos del header */
 }
 
 .header-text {
-    flex-grow: 1; /* Permite que el texto ocupe el espacio central */
-    padding: 0 20px; /* Espacio a los lados del texto */
+    padding: 0 20px; /* Espacio a los lados del texto si fuera necesario */
+    margin: 10px 0; /* Margen vertical */
 }
 
 header h1 {
-    margin: 0 0 5px 0; /* Menos margen inferior */
-    font-size: 2.2em; /* Puedes ajustar el tamaño si es necesario */
+    margin: 0 0 5px 0;
+    font-size: 2.2em;
 }
 
 header p {
@@ -44,6 +46,34 @@ header p {
     font-size: 1.1em;
     font-weight: 400;
 }
+
+/* --- Language Switcher Styles (Centrado, debajo del título) --- */
+.language-switcher {
+    margin-top: 15px; /* Espacio sobre las banderas, debajo del texto del header */
+    text-align: center;
+    /* Se quitaron todos los estilos de position, top, right, bg, shadow, etc. del switcher fijo */
+}
+
+.language-switcher a {
+    text-decoration: none;
+    margin: 0 8px; /* Espacio entre banderas */
+    transition: transform 0.2s ease;
+    display: inline-block; /* Para que la transición y el hover funcionen bien */
+}
+
+.language-switcher a:hover {
+    transform: scale(1.15);
+}
+
+.flag-icon {
+    width: 32px;  /* Ancho de la imagen de la bandera */
+    height: auto; /* Mantiene la proporción */
+    vertical-align: middle; /* Centra verticalmente con cualquier texto si lo hubiera */
+    border: 1px solid #ccc; /* Opcional: borde fino para las banderas */
+    border-radius: 3px;     /* Opcional: esquinas redondeadas para las banderas */
+}
+/* --- FIN Language Switcher --- */
+
 
 .category {
     background-color: #ffffff;
@@ -99,72 +129,6 @@ header p {
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 15px;
-    color: #555;
-    font-size: 0.9em;
-    border-top: 1px solid #ddd;
-}
-
-/* Ajustes para pantallas pequeñas (Tablets y Móviles) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Apila los elementos en vertical */
-        padding: 20px;
-    }
-
-    .logo {
-        height: 50px; /* Un poco más pequeños */
-        margin-bottom: 15px; /* Espacio debajo de los logos */
-    }
-    
-    .logo-colegio {
-        order: 1; /* Asegura el orden: Colegio */
-    }
-
-    .header-text {
-        order: 2; /* Mueve el texto al medio */
-        padding: 0;
-        margin-bottom: 15px;
-    }
-
-    .logo-ib {
-       margin-bottom: 0; /* Quita el margen al último logo */
-       order: 3; /* Mueve el logo IB al final */
-    }
-
-    header h1 {
-        font-size: 1.8em;
-    }
-     header p {
-        font-size: 1em;
-    }
-}
-
-/* Ajustes para pantallas muy pequeñas (Móviles) */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.6em;
-    }
-    .logo {
-        height: 45px;
-    }
-     .resource-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 15px;
-    }
-     .resource-button {
-        font-size: 1em;
-        padding: 15px 10px;
-    }
-    .resource-button .emoji {
-        font-size: 2em;
-    }
-
-}
-
 /* Estilos para la imagen de portada en los botones de recursos */
 .resource-cover-image {
     width: 60px;  /* Ancho de la imagen, ajústalo si lo ves muy grande o pequeño */
@@ -176,29 +140,32 @@ footer {
     border: 1px solid #eee; /* Opcional: un borde muy sutil alrededor de la imagen */
 }
 
-	/* --- Language Switcher Styles (MODIFICADO) --- */
-.language-switcher {
-    margin-top: 15px; /* Espacio sobre las banderas */
+footer {
     text-align: center;
-    /* !! QUITAMOS todos los estilos de position, top, right, bg, shadow, etc. !! */
+    margin-top: 40px;
+    padding: 15px;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
 }
 
-.language-switcher a {
-    text-decoration: none;
-    margin: 0 8px; /* Espacio entre banderas */
-    transition: transform 0.2s ease;
-    display: inline-block;
+/* --- Media Queries (Responsive) --- */
+@media (max-width: 768px) {
+    /* La cabecera ya es 'column' por defecto, así que no necesitamos cambiarla aquí */
+    .logo {
+        height: 50px;
+    }
+    header h1 { font-size: 1.8em; }
+    header p { font-size: 1em; }
+    .flag-icon { width: 28px; } /* Ajusta tamaño de bandera para tablet */
 }
 
-.language-switcher a:hover {
-    transform: scale(1.15);
+@media (max-width: 480px) {
+    header h1 { font-size: 1.6em; }
+    .logo { height: 45px; }
+    .resource-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; }
+    .resource-button { font-size: 1em; padding: 15px 10px; }
+    .resource-button .emoji { font-size: 2em; }
+    .resource-cover-image { width: 50px; max-height: 70px;} /* Ajusta imagen de portada para móvil */
+    .flag-icon { width: 26px; } /* Ajusta tamaño de bandera para móvil */
 }
-
-.flag-icon {
-    width: 32px;
-    height: auto;
-    vertical-align: middle;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-/* --- FIN Language Switcher --- */
