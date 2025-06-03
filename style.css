@@ -175,6 +175,7 @@ footer {
     border-radius: 4px; /* Opcional: esquinas ligeramente redondeadas para la imagen */
     border: 1px solid #eee; /* Opcional: un borde muy sutil alrededor de la imagen */
 }
+
 	/* --- Language Switcher Styles (MODIFICADO) --- */
 .language-switcher {
     margin-top: 15px; /* Espacio sobre las banderas */
