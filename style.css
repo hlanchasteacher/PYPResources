@@ -2,22 +2,21 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
-    /* Se quitó el padding-top: 60px; que era para el switcher fijo */
-    background-color: #f0f8ff; /* Azul cielo claro */
+    background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
 }
 
 header {
     display: flex;
-    flex-direction: column; /* Apila verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    background-color: #4CAF50; /* Verde */
+    flex-direction: row; /* !! CAMBIO: Para que los elementos estén en fila !! */
+    justify-content: space-between; /* !! CAMBIO: Espacio entre logos y texto !! */
+    align-items: center; /* Centra verticalmente los elementos en la fila */
+    background-color: #4CAF50;
     color: white;
-    padding: 25px 20px; /* Ajustamos padding */
-    text-align: center;
+    padding: 15px 30px; /* Padding original para layout horizontal */
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reducido un poco el margen inferior */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -25,15 +24,17 @@ header {
     height: 60px;
     width: auto;
     object-fit: contain;
-    background-color: white; /* Fondo blanco para mejor visibilidad si son PNGs transparentes */
+    background-color: white;
     padding: 5px;
     border-radius: 5px;
-    margin: 10px 0; /* Margen vertical para separar los elementos del header */
+    /* Quitamos margen vertical que era para apilar */
 }
 
 .header-text {
-    padding: 0 20px; /* Espacio a los lados del texto si fuera necesario */
-    margin: 10px 0; /* Margen vertical */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio central */
+    text-align: center; /* Centra el H1 y P dentro de este div */
+    padding: 0 20px; /* Espacio a los lados del texto, entre los logos */
+    /* Quitamos margen vertical que era para apilar */
 }
 
 header h1 {
@@ -47,18 +48,18 @@ header p {
     font-weight: 400;
 }
 
-/* --- Language Switcher Styles (Centrado, debajo del título) --- */
+/* --- Language Switcher Styles (Fuera del header, centrado) --- */
 .language-switcher {
-    margin-top: 15px; /* Espacio sobre las banderas, debajo del texto del header */
-    text-align: center;
-    /* Se quitaron todos los estilos de position, top, right, bg, shadow, etc. del switcher fijo */
+    text-align: center; /* Centra los elementos inline-block (los 'a') */
+    margin-top: 0; /* Eliminamos el margen superior que tenía antes */
+    margin-bottom: 25px; /* Espacio antes del contenido principal */
 }
 
 .language-switcher a {
     text-decoration: none;
-    margin: 0 8px; /* Espacio entre banderas */
+    margin: 0 8px;
     transition: transform 0.2s ease;
-    display: inline-block; /* Para que la transición y el hover funcionen bien */
+    display: inline-block;
 }
 
 .language-switcher a:hover {
@@ -66,11 +67,11 @@ header p {
 }
 
 .flag-icon {
-    width: 32px;  /* Ancho de la imagen de la bandera */
-    height: auto; /* Mantiene la proporción */
-    vertical-align: middle; /* Centra verticalmente con cualquier texto si lo hubiera */
-    border: 1px solid #ccc; /* Opcional: borde fino para las banderas */
-    border-radius: 3px;     /* Opcional: esquinas redondeadas para las banderas */
+    width: 32px;
+    height: auto;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 /* --- FIN Language Switcher --- */
 
@@ -84,7 +85,7 @@ header p {
 }
 
 .category h2 {
-    color: #007bff; /* Azul */
+    color: #007bff;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 10px;
     margin-top: 0;
@@ -93,8 +94,8 @@ header p {
 
 .resource-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Columnas flexibles */
-    gap: 20px; /* Espacio entre botones */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -103,7 +104,7 @@ header p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f8f9fa; /* Gris claro */
+    background-color: #f8f9fa;
     color: #333;
     text-decoration: none;
     padding: 20px 15px;
@@ -113,31 +114,30 @@ header p {
     font-weight: 600;
     border: 1px solid #ddd;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    min-height: 100px; /* Altura mínima para alinear */
+    min-height: 100px;
 }
 
 .resource-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    background-color: #e9ecef; /* Un poco más oscuro al pasar el ratón */
-    color: #0056b3; /* Azul oscuro */
+    background-color: #e9ecef;
+    color: #0056b3;
 }
 
 .resource-button .emoji {
-    font-size: 2.5em; /* Emojis más grandes */
+    font-size: 2.5em;
     display: block;
     margin-bottom: 10px;
 }
 
-/* Estilos para la imagen de portada en los botones de recursos */
 .resource-cover-image {
-    width: 60px;  /* Ancho de la imagen, ajústalo si lo ves muy grande o pequeño */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 80px; /* Altura máxima para que no sea demasiado alta */
-    object-fit: contain; /* Asegura que toda la imagen sea visible sin recortar, ajustándose al espacio */
-    margin-bottom: 8px; /* Espacio entre la imagen y el texto del nombre */
-    border-radius: 4px; /* Opcional: esquinas ligeramente redondeadas para la imagen */
-    border: 1px solid #eee; /* Opcional: un borde muy sutil alrededor de la imagen */
+    width: 60px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #eee;
 }
 
 footer {
@@ -151,13 +151,20 @@ footer {
 
 /* --- Media Queries (Responsive) --- */
 @media (max-width: 768px) {
-    /* La cabecera ya es 'column' por defecto, así que no necesitamos cambiarla aquí */
+    header {
+        flex-direction: column; /* En pantallas pequeñas, apilamos el header */
+        padding: 20px;
+    }
     .logo {
         height: 50px;
+        margin-bottom: 15px; /* Espacio cuando se apilan */
+    }
+    .header-text {
+        margin-bottom: 15px; /* Espacio cuando se apilan */
     }
     header h1 { font-size: 1.8em; }
     header p { font-size: 1em; }
-    .flag-icon { width: 28px; } /* Ajusta tamaño de bandera para tablet */
+    .flag-icon { width: 28px; }
 }
 
 @media (max-width: 480px) {
@@ -166,6 +173,6 @@ footer {
     .resource-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; }
     .resource-button { font-size: 1em; padding: 15px 10px; }
     .resource-button .emoji { font-size: 2em; }
-    .resource-cover-image { width: 50px; max-height: 70px;} /* Ajusta imagen de portada para móvil */
-    .flag-icon { width: 26px; } /* Ajusta tamaño de bandera para móvil */
+    .resource-cover-image { width: 50px; max-height: 70px;}
+    .flag-icon { width: 26px; }
 }
