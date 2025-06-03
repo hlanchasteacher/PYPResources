@@ -162,6 +162,19 @@ footer {
     .resource-button .emoji {
         font-size: 2em;
     }
+
+}
+
+/* Estilos para la imagen de portada en los botones de recursos */
+.resource-cover-image {
+    width: 60px;  /* Ancho de la imagen, ajústalo si lo ves muy grande o pequeño */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 80px; /* Altura máxima para que no sea demasiado alta */
+    object-fit: contain; /* Asegura que toda la imagen sea visible sin recortar, ajustándose al espacio */
+    margin-bottom: 8px; /* Espacio entre la imagen y el texto del nombre */
+    border-radius: 4px; /* Opcional: esquinas ligeramente redondeadas para la imagen */
+    border: 1px solid #eee; /* Opcional: un borde muy sutil alrededor de la imagen */
+}
 	/* --- Language Switcher Styles (MODIFICADO) --- */
 .language-switcher {
     margin-top: 15px; /* Espacio sobre las banderas */
@@ -188,4 +201,3 @@ footer {
     border-radius: 3px;
 }
 /* --- FIN Language Switcher --- */
-}
